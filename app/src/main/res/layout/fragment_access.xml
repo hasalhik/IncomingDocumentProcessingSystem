@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/settings_file_header_bloc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/material_drawer_accent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <ImageView
+            android:id="@+id/settings_file_ic"
+            android:layout_width="@dimen/settings_user_photo_width"
+            android:layout_height="@dimen/settings_user_photo_height"
+            android:layout_marginStart="@dimen/app_margin"
+            android:layout_marginBottom="@dimen/app_small_margin"
+            android:src="@drawable/ic_file_blue"
+            app:civ_circle_background_color="@color/white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/access_file_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/app_small_margin"
+            android:layout_marginTop="@dimen/app_small_margin"
+            android:text="Название файла"
+            android:textColor="@color/black"
+            android:textSize="@dimen/normalText"
+            android:maxLines="3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/settings_file_ic"
+            app:layout_constraintTop_toTopOf="@id/settings_file_ic" />
+
+        <TextView
+            android:id="@+id/access_file_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/app_margin"
+            tools:text="19:20"
+            android:textColor="@color/grey"
+            android:textSize="@dimen/smallText"
+            app:layout_constraintEnd_toEndOf="parent"
+
+            app:layout_constraintTop_toBottomOf="@id/access_file_name"
+            android:gravity="end"
+            android:layout_marginEnd="@dimen/app_small_margin"/>
+
+        <TextView
+            android:id="@+id/file_from"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="@dimen/app_small_margin"
+            android:gravity="start"
+            android:maxLines="1"
+            android:textColor="@color/grey"
+
+            app:layout_constraintEnd_toStartOf="@+id/access_file_date"
+            app:layout_constraintStart_toEndOf="@+id/settings_file_ic"
+            app:layout_constraintTop_toBottomOf="@+id/access_file_name"
+            tools:text="автор" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/create_group_counts"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/app_margin"
+        android:text="Выбирети пользователей, которые будут иметь доступ к документу:"
+        android:textColor="@color/parsnip"
+        android:textSize="@dimen/smallText"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@+id/settings_file_header_bloc"
+        tools:layout_editor_absoluteX="16dp" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/access_btn_complete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/app_margin"
+        android:backgroundTint="@color/parsnip"
+        android:src="@drawable/ic_done"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:contentDescription="add_contacts btn next" />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/access_recycle_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        tools:listitem="@layout/main_list_tem"
+        app:layout_constraintTop_toBottomOf="@id/create_group_counts"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

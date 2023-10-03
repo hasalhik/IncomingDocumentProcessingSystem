@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.screens.settings.ChangeBioFragment">
+
+    <EditText
+        android:id="@+id/settings_input_name_label"
+        style="@style/editText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Название нового признака"
+        android:inputType="text"
+        app:layout_constraintEnd_toStartOf="@+id/btn_create_label"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/add_label_recycle_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        tools:listitem="@layout/label_item"
+        android:layout_marginTop="@dimen/app_small_margin"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintTop_toBottomOf="@id/settings_input_name_label"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+
+    <ImageView
+        android:id="@+id/btn_create_label"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/ic_new_label"
+        app:layout_constraintBottom_toBottomOf="@+id/settings_input_name_label"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/settings_input_name_label"
+        android:layout_marginEnd="@dimen/app_small_margin"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/add_label_btn_next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/app_margin"
+        android:backgroundTint="@color/parsnip"
+        android:src="@drawable/ic_btn_next"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:contentDescription="add_contacts btn next" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

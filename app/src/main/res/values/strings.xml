@@ -1,0 +1,45 @@
+<resources>
+    <string name="app_name">Incoming document processing system</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="settings_default_username">имя пользователя</string>
+    <string name="settings_default_status">В сети</string>
+    <string name="settings_text_account">Аккаунт</string>
+    <string name="setting_default_number">+799999999</string>
+    <string name="settings_label_phone_number">Нажмите, чтобы изменить номер телефона</string>
+    <string name="setting_default_username">DefaultLogin</string>
+    <string name="settings_label_username">Имя пользователя</string>
+    <string name="settings_default_bio">О себе</string>
+    <string name="settings_label_bio">Напишите немного о себе</string>
+    <string name="settings_menu_change_name">Изменить имя</string>
+    <string name="Settings_menu_exit">Выход</string>
+    <string name="cd_register_image">register_image</string>
+    <string name="register_text_enter_code">Введите код</string>
+    <string name="register_text_we_sent">Мы отправили SMS с кодом проверки на ваш телефон</string>
+    <string name="register_hint_default_code">- - - - - -</string>
+    <string name="register_title_your_phone">Ваш телефон</string>
+    <string name="register_toast_enter_phone">Введите номер телефона</string>
+    <string name="register_phone_hint">------------</string>
+    <string name="settings_hint_input_name">Имя</string>
+    <string name="settings_hint_input_surname">Фамилия</string>
+    <string name="setting_toast_name_is_empty">Имя не может быть пустым</string>
+    <string name="setting_toast_surname_is_empty">Фамилия не может быть пустая</string>
+    <string name="toast_data_update">Данные обновлены</string>
+    <string name="settings_hint_input_username">username</string>
+    <string name="settings_input_hint_bio">Bio</string>
+    <string name="menu_clear_chat">Очистить чят</string>
+    <string name="menu_delete_chat">Удалить чят</string>
+    <string name="settings_file_text_doc">Документ</string>
+    <string name="settings_file_delete">Удалить файл</string>
+    <string name="Yes">Да</string>
+    <string name="No">Нет</string>
+    <string name="TitleConfirmDelete">Вы действительно хотите удалить файл?</string>
+    <string name="settings_file_new_label">Добавить новую характеристику</string>
+    <string name="settings_file_text_doc2">Характеристики</string>
+    <plurals name="count_members">
+        <item quantity="one">%d участник</item>
+        <item quantity="few">%d участника</item>
+        <item quantity="many">%d участников</item>
+        <item quantity="other">%d учатников</item>
+    </plurals>
+</resources>

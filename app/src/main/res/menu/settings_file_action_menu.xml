@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:icon="@drawable/ic_btn_action_menu"
+        app:showAsAction="ifRoom"
+        android:title="">
+        <menu>
+
+            <item
+                android:id="@+id/settings_file_delete"
+                android:icon="@drawable/ic_delete"
+                android:title="@string/settings_file_delete"
+                app:showAsAction="never" />
+
+            <item
+                android:id="@+id/settings_file_new_label"
+                android:icon="@drawable/ic_new_label"
+                android:title="Добавить признак"
+                app:showAsAction="never" />
+
+
+        </menu>
+    </item>
+
+</menu>

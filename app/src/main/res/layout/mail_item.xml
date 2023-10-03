@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:backgroundTint="@color/black">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/mail_bloc2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_receiving_message"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/mail_bloc"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_receiving_message"
+
+            app:layout_constraintBottom_toTopOf="@+id/mail_dwl_file"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/mail_IV"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <TextView
+                android:id="@+id/mail_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:textColor="@color/black"
+                android:visibility="visible"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Тема:" />
+
+
+            <TextView
+                android:id="@+id/mail_body"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:maxLines="2"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/mail_name"
+                tools:text="Текст:" />
+
+            <TextView
+                android:id="@+id/mail_from"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:maxLines="1"
+                android:textColor="@color/grey"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/mail_body"
+                tools:text="От:" />
+
+            <TextView
+                android:id="@+id/mail_time"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:maxLines="1"
+                android:textColor="@color/grey"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/mail_from"
+                tools:text="" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <ImageView
+            android:id="@+id/mail_delete"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_margin="@dimen/app_small_margin"
+            android:src="@drawable/ic_delete"
+            app:layout_constraintEnd_toEndOf="@+id/mail_bloc"
+            app:layout_constraintTop_toBottomOf="@+id/mail_bloc" />
+
+        <ImageView
+            android:id="@+id/mail_add"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+
+            android:layout_margin="@dimen/app_small_margin"
+            android:src="@drawable/ic_outline_note_add_24"
+            app:layout_constraintStart_toEndOf="@+id/mail_dwl_file"
+            app:layout_constraintTop_toBottomOf="@+id/mail_bloc" />
+
+        <TextView
+            android:id="@+id/mail_file_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/app_small_margin"
+            android:gravity="start"
+            android:maxLines="2"
+            android:textColor="@color/grey"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/mail_delete"
+            app:layout_constraintStart_toEndOf="@+id/mail_add"
+            app:layout_constraintTop_toBottomOf="@+id/mail_bloc"
+            tools:text="" />
+
+        <ImageView
+            android:id="@+id/mail_dwl_file"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_margin="@dimen/app_small_margin"
+            android:src="@drawable/ic_file_download_black"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/mail_bloc" />
+
+        <ImageView
+            android:id="@+id/mail_IV"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_margin="@dimen/app_small_margin"
+            android:layout_marginStart="10dp"
+            android:src="@drawable/ic_mail_black"
+            app:layout_constraintEnd_toStartOf="@+id/mail_bloc"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            style="@style/separator"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/mail_dwl_file" />
+        <ProgressBar
+            android:id="@+id/file_mail_progress_bar"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_margin="@dimen/app_small_margin"
+            android:visibility="invisible"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/mail_bloc" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

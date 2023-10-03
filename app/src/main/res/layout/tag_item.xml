@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:backgroundTint="@color/black">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/tag_bloc2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_receiving_message"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/tag_bloc"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/app_small_margin"
+            android:background="@drawable/bg_receiving_message"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/tag_delete"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/tag_IV"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_margin="@dimen/app_small_margin"
+            android:src="@drawable/ic_tag"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+            <TextView
+                android:id="@+id/tag_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:maxLines="2"
+                android:textColor="@color/black"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@id/tag_bloc"
+                app:layout_constraintStart_toEndOf="@+id/tag_IV"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="tag name" />
+
+
+            <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/tag_choice"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/ic_choice"
+
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="@+id/tag_IV"
+            app:layout_constraintEnd_toEndOf="@+id/tag_IV" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <ImageView
+                android:id="@+id/tag_delete"
+                android:layout_width="20dp"
+                android:layout_height="31dp"
+
+                android:layout_marginEnd="@dimen/app_small_margin"
+                android:src="@drawable/ic_delete"
+                app:layout_constraintBottom_toBottomOf="@id/tag_bloc2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

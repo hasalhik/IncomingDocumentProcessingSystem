@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/settingsButtons"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/app_margin">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/contact_photo"
+        android:layout_width="@dimen/settings_user_photo_width"
+        android:layout_height="@dimen/settings_user_photo_height"
+        android:src="@drawable/default_photo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/contact_fullname"
+        style="@style/normalText"
+        android:text="Petr Petrov"
+        app:layout_constraintStart_toEndOf="@id/contact_photo"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/contact_status"
+        style="@style/smallText"
+        android:text="в сети"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/contact_photo" />
+
+    <TextView
+        android:id="@+id/contact_admin"
+        style="@style/smallText"
+        android:text="Администратор"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/contact_status" />
+
+    <ImageView
+        android:id="@+id/contact_delete"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/ic_delete"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+       />
+
+    <ImageView
+        android:id="@+id/contact_add_admin"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/ic_admin_settings"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/contact_delete"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginEnd="@dimen/app_margin"/>
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

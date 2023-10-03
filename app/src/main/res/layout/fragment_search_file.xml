@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.screens.settings.SettingsFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/settings_search_header_bloc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/material_drawer_accent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        >
+
+
+        <ImageView
+            android:id="@+id/settings_search_ic"
+            android:layout_width="@dimen/settings_user_photo_width"
+            android:layout_height="@dimen/settings_user_photo_height"
+            android:layout_marginStart="@dimen/app_margin"
+            android:layout_marginBottom="@dimen/app_small_margin"
+            android:src="@drawable/ic_search"
+            app:civ_circle_background_color="@color/white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/settings_search_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/app_small_margin"
+            android:maxLines="3"
+            android:text="Укажите параметры поиска"
+            android:textColor="@color/black"
+            android:textSize="@dimen/normalText"
+            app:layout_constraintBottom_toBottomOf="@+id/settings_search_ic"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/settings_search_ic"
+            app:layout_constraintTop_toTopOf="@id/settings_search_ic" />
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/settings_search_text_doc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/app_margin"
+        android:layout_marginTop="@dimen/vertical_large_margin"
+        android:text="Поиск в названии и описании докумета:"
+        android:textColor="@color/parsnip"
+        android:textSize="@dimen/smallText"
+        android:textStyle="bold"
+
+        app:layout_constraintTop_toBottomOf="@id/settings_search_header_bloc" />
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/settings_btn_change_execution"
+        style="@style/settingsButtons"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/settings_search_text_doc"
+        android:layout_height="50dp">
+
+        <EditText
+            android:id="@+id/settings_search_edit_text"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/settings_add_search"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0"
+            android:hint="Введите текст"
+            android:textColorHint="@color/grey"/>
+
+        <ImageView
+            android:id="@+id/settings_add_search"
+            android:layout_width="@dimen/settings_user_photo_width"
+            android:layout_height="@dimen/settings_user_photo_height"
+            android:src="@drawable/ic_search_black"
+            app:civ_circle_background_color="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+
+        <ImageView
+            android:id="@+id/files_plus_search"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@drawable/ic_plus_black"
+            app:layout_constraintBottom_toBottomOf="@+id/settings_add_search"
+            app:layout_constraintStart_toStartOf="@+id/settings_add_search"
+            />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/settings_search_btn_date"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/settings_btn_change_execution"
+        style="@style/settingsButtons"
+        android:layout_height="50dp">
+
+        <TextView
+            android:id="@+id/settings_search_description"
+            style="@style/normalText"
+            android:text="Поиск по времени исполнения документа"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/settings_search_btn_date" />
+
+
+        <View
+            style="@style/separator"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:id="@+id/settings_search_text_doc2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/app_margin"
+        android:layout_marginTop="@dimen/vertical_large_margin"
+        android:text="Поиск по признакам и свойствам:"
+        android:textColor="@color/parsnip"
+        android:textSize="@dimen/smallText"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/settings_search_btn_date" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/settings_search_recycle_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        tools:listitem="@layout/label_item"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintTop_toBottomOf="@id/settings_search_text_doc2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
